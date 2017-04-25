@@ -1,0 +1,236 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://data/level/level.gd" type="Script" id=1]
+[ext_resource path="res://data/bg/bg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/ui/ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/buildings/building.tscn" type="PackedScene" id=4]
+[ext_resource path="res://data/player/player.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="level" type="Node2D"]
+
+script/script = ExtResource( 1 )
+enemy_a = "res://data/enemy/enemy.tscn"
+spawn_pos_taken = [ false, false, false, false, false, false ]
+
+[node name="bg" parent="." instance=ExtResource( 2 )]
+
+[node name="ui" parent="." instance=ExtResource( 3 )]
+
+z/z = 0
+
+[node name="building" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 272.45, 163.099 )
+
+[node name="enemies" type="Node2D" parent="."]
+
+z/z = 6
+z/relative = false
+
+[node name="Button" type="Button" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 553.0
+margin/top = 6.0
+margin/right = 639.0
+margin/bottom = 58.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Move"
+flat = false
+
+[node name="player" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -75.9411, 122.104 )
+z/z = 6
+
+[node name="spawn_area" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="a2d_spawn1" type="Area2D" parent="spawn_area"]
+
+transform/pos = Vector2( 495.005, 102.001 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, 4.69897, -0.0334857 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn1"]
+
+transform/pos = Vector2( 4.69897, -0.0334857 )
+transform/scale = Vector2( 5.4884, 5.15687 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pos_spawn" type="Position2D" parent="spawn_area/a2d_spawn1"]
+
+transform/pos = Vector2( 5.41502, 1.52588e-05 )
+
+[node name="a2d_spawn2" type="Area2D" parent="spawn_area"]
+
+transform/pos = Vector2( 168, 44 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn2"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -3.86113, 3.89402 )
+transform/scale = Vector2( 5.4884, 5.15687 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pos_spawn" type="Position2D" parent="spawn_area/a2d_spawn2"]
+
+transform/pos = Vector2( -3.93752, 0.0775146 )
+
+[node name="a2d_spawn3" type="Area2D" parent="spawn_area"]
+
+transform/pos = Vector2( 114, 278 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn3"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -3.86113, 3.89402 )
+transform/scale = Vector2( 5.4884, 5.15687 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pos_spawn" type="Position2D" parent="spawn_area/a2d_spawn3"]
+
+transform/pos = Vector2( -3.93752, 0.0775146 )
+
+[node name="a2d_spawn4" type="Area2D" parent="spawn_area"]
+
+transform/pos = Vector2( 440, 302 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn4"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -3.86113, 3.89402 )
+transform/scale = Vector2( 5.4884, 5.15687 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pos_spawn" type="Position2D" parent="spawn_area/a2d_spawn4"]
+
+transform/pos = Vector2( -3.93752, 0.0775146 )
+
+[node name="a2d_spawn5" type="Area2D" parent="spawn_area"]
+
+transform/pos = Vector2( 270, 302 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn5"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -3.86113, 3.89402 )
+transform/scale = Vector2( 5.4884, 5.15687 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pos_spawn" type="Position2D" parent="spawn_area/a2d_spawn5"]
+
+transform/pos = Vector2( -3.93752, 0.0775146 )
+
+[node name="a2d_spawn6" type="Area2D" parent="spawn_area"]
+
+transform/pos = Vector2( 354, 40 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn6"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -3.86113, 3.89402 )
+transform/scale = Vector2( 5.4884, 5.15687 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pos_spawn" type="Position2D" parent="spawn_area/a2d_spawn6"]
+
+transform/pos = Vector2( -3.93752, 0.0775146 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[connection signal="body_enter" from="spawn_area/a2d_spawn1" to="." method="_on_a2d_spawn1_body_enter"]
+
+[connection signal="body_exit" from="spawn_area/a2d_spawn1" to="." method="_on_a2d_spawn1_body_exit"]
+
+[connection signal="body_enter" from="spawn_area/a2d_spawn2" to="." method="_on_a2d_spawn2_body_enter"]
+
+[connection signal="body_exit" from="spawn_area/a2d_spawn2" to="." method="_on_a2d_spawn2_body_exit"]
+
+[connection signal="body_enter" from="spawn_area/a2d_spawn3" to="." method="_on_a2d_spawn3_body_enter"]
+
+[connection signal="body_exit" from="spawn_area/a2d_spawn3" to="." method="_on_a2d_spawn3_body_exit"]
+
+[connection signal="body_enter" from="spawn_area/a2d_spawn4" to="." method="_on_a2d_spawn4_body_enter"]
+
+[connection signal="body_exit" from="spawn_area/a2d_spawn4" to="." method="_on_a2d_spawn4_body_exit"]
+
+[connection signal="body_enter" from="spawn_area/a2d_spawn5" to="." method="_on_a2d_spawn5_body_enter"]
+
+[connection signal="body_exit" from="spawn_area/a2d_spawn5" to="." method="_on_a2d_spawn5_body_exit"]
+
+[connection signal="body_enter" from="spawn_area/a2d_spawn6" to="." method="_on_a2d_spawn6_body_enter"]
+
+[connection signal="body_exit" from="spawn_area/a2d_spawn6" to="." method="_on_a2d_spawn6_body_exit"]
+
+

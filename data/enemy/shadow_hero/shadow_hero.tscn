@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://data/enemy/enemy.gd" type="Script" id=1]
+[ext_resource path="res://data/player/hero_main1.png" type="Texture" id=2]
+[ext_resource path="res://data/player/hero_main2.png" type="Texture" id=3]
+[ext_resource path="res://data/player/hero_main3.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":5.0 } ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="shadow_hero" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 0.711776, 0, 0, 1.2449, 10.9357, 13.7468 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+name = "Shadow Hero"
+speed = 1000
+health = 200
+max_health = 200
+atk = 100
+def = 0
+agi = 50
+expr = 400
+gold = 500
+resist_stun = false
+
+[node name="spr_enemy" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 2 )
+animation = "default"
+frame = 2
+playing = true
+centered = false
+modulate = Color( 0.109375, 0.109375, 0.109375, 1 )
+
+[node name="col_enemy" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 10.9357, 13.7468 )
+transform/scale = Vector2( 0.711776, 1.2449 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="a2d_enemy" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11.5686, 13.8291 )
+transform/scale = Vector2( 0.354825, 0.449564 )
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 3.15439, 0, 0, 3.21052, -6.23113, -0.968221 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a2d_enemy"]
+
+transform/pos = Vector2( -6.23113, -0.968221 )
+transform/scale = Vector2( 3.15439, 3.21052 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="mouse_enter" from="a2d_enemy" to="." method="_on_a2d_enemy_mouse_enter"]
+
+[connection signal="mouse_exit" from="a2d_enemy" to="." method="_on_a2d_enemy_mouse_exit"]
+
+

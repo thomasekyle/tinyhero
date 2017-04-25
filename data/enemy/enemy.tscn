@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://data/enemy/enemy.gd" type="Script" id=1]
+[ext_resource path="res://data/enemy/slime.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="enemy" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.54485, 0, 0, 1.6355, 16.7658, 18.8246 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+name = "Enemy"
+speed = 1000
+health = 15
+max_health = 20
+atk = 7
+def = 0
+agi = 5
+expr = 2
+gold = 10
+resist_stun = false
+
+[node name="spr_enemy" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="col_enemy" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 16.7658, 18.8246 )
+transform/scale = Vector2( 1.54485, 1.6355 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="a2d_enemy" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11.0246, 13.1686 )
+transform/scale = Vector2( 0.625337, 0.653884 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 3.15439, 0, 0, 3.21052, 8.5673, 7.98746 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a2d_enemy"]
+
+transform/pos = Vector2( 8.5673, 7.98746 )
+transform/scale = Vector2( 3.15439, 3.21052 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="mouse_enter" from="a2d_enemy" to="." method="_on_a2d_enemy_mouse_enter"]
+
+[connection signal="mouse_exit" from="a2d_enemy" to="." method="_on_a2d_enemy_mouse_exit"]
+
+

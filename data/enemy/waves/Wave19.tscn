@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://data/enemy/waves/Wave1.gd" type="Script" id=1]
+[ext_resource path="res://data/enemy/dark_mage/dark_mage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/enemy/dark_knight/dark_knight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/enemy/dark_priest/dark_priest.tscn" type="PackedScene" id=4]
+
+[node name="Wave19" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="dark_mage" parent="." instance=ExtResource( 2 )]
+
+[node name="dark_mage1" parent="." instance=ExtResource( 2 )]
+
+[node name="dark_knight" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_priest" parent="." instance=ExtResource( 4 )]
+
+[node name="dark_priest3" parent="." instance=ExtResource( 4 )]
+
+[node name="dark_knight1" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_knight2" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_mage2" parent="." instance=ExtResource( 2 )]
+
+[node name="dark_mage3" parent="." instance=ExtResource( 2 )]
+
+[node name="dark_priest4" parent="." instance=ExtResource( 4 )]
+
+[node name="dark_knight3" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_knight4" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_knight5" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_knight6" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_mage4" parent="." instance=ExtResource( 2 )]
+
+[node name="dark_mage5" parent="." instance=ExtResource( 2 )]
+
+[node name="dark_priest5" parent="." instance=ExtResource( 4 )]
+
+[node name="dark_priest6" parent="." instance=ExtResource( 4 )]
+
+[node name="dark_knight7" parent="." instance=ExtResource( 3 )]
+
+[node name="dark_knight8" parent="." instance=ExtResource( 3 )]
+
+

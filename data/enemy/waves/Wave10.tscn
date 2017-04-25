@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://data/enemy/waves/Wave5.gd" type="Script" id=1]
+[ext_resource path="res://data/enemy/dragonfly/dragonfly.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/enemy/dragonfly/dragonfly watcher.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/enemy/dragoon/dragoon.tscn" type="PackedScene" id=4]
+
+[node name="Wave10" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="dragonfly" parent="." instance=ExtResource( 2 )]
+
+[node name="dragonfly1" parent="." instance=ExtResource( 2 )]
+
+[node name="dragonfly2" parent="." instance=ExtResource( 2 )]
+
+[node name="dragonfly3" parent="." instance=ExtResource( 2 )]
+
+[node name="dragonfly4" parent="." instance=ExtResource( 2 )]
+
+[node name="dragonfly_watcher" parent="." instance=ExtResource( 3 )]
+
+[node name="dragonfly_watcher1" parent="." instance=ExtResource( 3 )]
+
+[node name="Dragoon" parent="." instance=ExtResource( 4 )]
+
+

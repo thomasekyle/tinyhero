@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://data/enemy/waves/Wave1.gd" type="Script" id=1]
+[ext_resource path="res://data/enemy/undead/undead.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/enemy/demon_eye/demon_eye.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/enemy/mummy/mummy.tscn" type="PackedScene" id=4]
+
+[node name="Wave13" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="undead" parent="." instance=ExtResource( 2 )]
+
+[node name="undead1" parent="." instance=ExtResource( 2 )]
+
+[node name="undead2" parent="." instance=ExtResource( 2 )]
+
+[node name="undead3" parent="." instance=ExtResource( 2 )]
+
+[node name="demon_eye" parent="." instance=ExtResource( 3 )]
+
+[node name="demon_eye1" parent="." instance=ExtResource( 3 )]
+
+[node name="mummy" parent="." instance=ExtResource( 4 )]
+
+[node name="demon_eye2" parent="." instance=ExtResource( 3 )]
+
+[node name="undead5" parent="." instance=ExtResource( 2 )]
+
+[node name="undead4" parent="." instance=ExtResource( 2 )]
+
+[node name="mummy1" parent="." instance=ExtResource( 4 )]
+
+[node name="undead6" parent="." instance=ExtResource( 2 )]
+
+[node name="mummy2" parent="." instance=ExtResource( 4 )]
+
+[node name="demon_eye3" parent="." instance=ExtResource( 3 )]
+
+[node name="mummy3" parent="." instance=ExtResource( 4 )]
+
+[node name="undead7" parent="." instance=ExtResource( 2 )]
+
+

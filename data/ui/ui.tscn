@@ -1,0 +1,334 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://data/ui/ui.gd" type="Script" id=1]
+[ext_resource path="res://data/fnt/press_start_sm.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://data/themes/blank_button.tres" type="StyleBox" id=3]
+
+[sub_resource type="Theme" id=1]
+
+default_font = ExtResource( 2 )
+
+[node name="ui" type="Node2D"]
+
+z/z = 5
+script/script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = SubResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+
+visibility/opacity = 0.774689
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 355.0
+margin/right = 640.0
+margin/bottom = 480.0
+
+[node name="lbl_townhealth" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 40.0
+margin/top = 380.0
+margin/right = 136.0
+margin/bottom = 415.0
+text = "HP:27/27"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_heropower" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 322.0
+margin/top = 377.0
+margin/right = 418.0
+margin/bottom = 397.0
+text = "AP:10/10"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_attack" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 322.0
+margin/top = 401.0
+margin/right = 382.0
+margin/bottom = 420.0
+text = "Atk:5"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_defense" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 63.0
+margin/top = 410.0
+margin/right = 123.0
+margin/bottom = 437.0
+text = "Def:5"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_gold" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 2.0
+margin/top = 453.0
+margin/right = 110.0
+margin/bottom = 480.0
+text = "Gold: 100"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_statpoints" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 207.0
+margin/top = 455.0
+margin/right = 365.0
+margin/bottom = 482.0
+text = "Stat Points:0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btn_upgrade_def" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 181.0
+margin/top = 411.0
+margin/right = 269.0
+margin/bottom = 432.0
+custom_styles/normal = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Upgrade"
+flat = false
+
+[node name="btn_upgrade_hp" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 181.0
+margin/top = 383.0
+margin/right = 269.0
+margin/bottom = 404.0
+custom_styles/normal = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Upgrade"
+flat = false
+
+[node name="btn_upgrade_agi" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 510.0
+margin/top = 427.0
+margin/right = 633.0
+margin/bottom = 443.0
+custom_styles/normal = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "+"
+flat = false
+
+[node name="btn_upgrade_atk" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 510.0
+margin/top = 402.0
+margin/right = 633.0
+margin/bottom = 418.0
+custom_styles/normal = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "+"
+flat = false
+
+[node name="btn_upgrade_ap" type="Button" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 510.0
+margin/top = 377.0
+margin/right = 633.0
+margin/bottom = 393.0
+custom_styles/normal = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "+"
+flat = false
+
+[node name="lbl_agi" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 323.0
+margin/top = 428.0
+margin/right = 383.0
+margin/bottom = 440.0
+text = "Agi:5"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_town" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 362.0
+margin/right = 186.0
+margin/bottom = 374.0
+text = "Rinlin Status:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_hero" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 305.0
+margin/top = 359.0
+margin/right = 449.0
+margin/bottom = 371.0
+text = "Hero Status:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_level" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 451.0
+margin/top = 358.0
+margin/right = 513.0
+margin/bottom = 370.0
+text = "Lvl:1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_exp" type="Label" parent="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 415.0
+margin/top = 461.0
+margin/right = 535.0
+margin/bottom = 473.0
+text = "Exp:0/200"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="mouse_enter" from="Control/btn_upgrade_def" to="." method="_on_btn_upgrade_def_mouse_enter"]
+
+[connection signal="mouse_exit" from="Control/btn_upgrade_def" to="." method="_on_btn_upgrade_def_mouse_exit"]
+
+[connection signal="pressed" from="Control/btn_upgrade_def" to="." method="_on_btn_upgrade_def_pressed"]
+
+[connection signal="mouse_enter" from="Control/btn_upgrade_hp" to="." method="_on_btn_upgrade_hp_mouse_enter"]
+
+[connection signal="mouse_exit" from="Control/btn_upgrade_hp" to="." method="_on_btn_upgrade_hp_mouse_exit"]
+
+[connection signal="pressed" from="Control/btn_upgrade_hp" to="." method="_on_btn_upgrade_hp_pressed"]
+
+[connection signal="mouse_enter" from="Control/btn_upgrade_agi" to="." method="_on_btn_upgrade_agi_mouse_enter"]
+
+[connection signal="mouse_exit" from="Control/btn_upgrade_agi" to="." method="_on_btn_upgrade_agi_mouse_exit"]
+
+[connection signal="pressed" from="Control/btn_upgrade_agi" to="." method="_on_btn_upgrade_agi_pressed"]
+
+[connection signal="mouse_enter" from="Control/btn_upgrade_atk" to="." method="_on_btn_upgrade_atk_mouse_enter"]
+
+[connection signal="mouse_exit" from="Control/btn_upgrade_atk" to="." method="_on_btn_upgrade_atk_mouse_exit"]
+
+[connection signal="pressed" from="Control/btn_upgrade_atk" to="." method="_on_btn_upgrade_atk_pressed"]
+
+[connection signal="mouse_enter" from="Control/btn_upgrade_ap" to="." method="_on_btn_upgrade_ap_mouse_enter"]
+
+[connection signal="mouse_exit" from="Control/btn_upgrade_ap" to="." method="_on_btn_upgrade_ap_mouse_exit"]
+
+[connection signal="pressed" from="Control/btn_upgrade_ap" to="." method="_on_btn_upgrade_ap_pressed"]
+
+

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://data/enemy/waves/Wave2.gd" type="Script" id=1]
+[ext_resource path="res://data/enemy/bat/bat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/enemy/spider/spider.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/enemy/ant/ant.tscn" type="PackedScene" id=4]
+
+[node name="Wave4" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="bat" parent="." instance=ExtResource( 2 )]
+
+[node name="bat1" parent="." instance=ExtResource( 2 )]
+
+[node name="spider" parent="." instance=ExtResource( 3 )]
+
+[node name="spider1" parent="." instance=ExtResource( 3 )]
+
+[node name="ant" parent="." instance=ExtResource( 4 )]
+
+[node name="spider2" parent="." instance=ExtResource( 3 )]
+
+[node name="bat2" parent="." instance=ExtResource( 2 )]
+
+[node name="bat3" parent="." instance=ExtResource( 2 )]
+
+[node name="spider3" parent="." instance=ExtResource( 3 )]
+
+[node name="spider4" parent="." instance=ExtResource( 3 )]
+
+[node name="ant1" parent="." instance=ExtResource( 4 )]
+
+[node name="ant2" parent="." instance=ExtResource( 4 )]
+
+[node name="ant3" parent="." instance=ExtResource( 4 )]
+
+[node name="spider5" parent="." instance=ExtResource( 3 )]
+
+[node name="spider6" parent="." instance=ExtResource( 3 )]
+
+[node name="ant4" parent="." instance=ExtResource( 4 )]
+
+[node name="ant5" parent="." instance=ExtResource( 4 )]
+
+[node name="ant6" parent="." instance=ExtResource( 4 )]
+
+[node name="ant7" parent="." instance=ExtResource( 4 )]
+
+
