@@ -88,7 +88,7 @@ func get_base():
 	return base
 	
 func reset_music():
-	var song = preload("res://data/audio/bgm/tiny_hero_just_getting_started.ogg")
+	var song = preload("res://data/audio/bgm/tiny_hero_you_can_do_this.ogg")
 	if (music_player.get_stream() == song):
 		pass
 	else:

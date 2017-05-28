@@ -21,6 +21,7 @@ extents = Vector2( 10, 10 )
 
 [node name="slime" type="KinematicBody2D"]
 
+transform/scale = Vector2( 2.5, 2.5 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1.54485, 0, 0, 1.6355, 16.7658, 18.8246 )
@@ -44,7 +45,6 @@ resist_stun = false
 
 frames = SubResource( 2 )
 animation = "default"
-frame = 2
 playing = true
 centered = false
 

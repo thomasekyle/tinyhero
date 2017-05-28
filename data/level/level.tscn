@@ -19,17 +19,20 @@ spawn_pos_taken = [ false, false, false, false, false, false ]
 
 [node name="bg" parent="." instance=ExtResource( 2 )]
 
+transform/pos = Vector2( -135.354, -134.463 )
+transform/scale = Vector2( 2.5, 2.5 )
+
 [node name="ui" parent="." instance=ExtResource( 3 )]
 
+transform/scale = Vector2( 2, 2 )
 z/z = 0
 
 [node name="building" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 272.45, 163.099 )
+transform/pos = Vector2( 569.396, 294.238 )
 
 [node name="enemies" type="Node2D" parent="."]
 
-transform/scale = Vector2( 1.25, 1.25 )
 z/z = 6
 z/relative = false
 
@@ -53,16 +56,14 @@ flat = false
 [node name="player" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -75.9411, 122.104 )
-transform/scale = Vector2( 2, 2 )
+transform/scale = Vector2( 2.5, 2.5 )
 z/z = 6
 
 [node name="spawn_area" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="a2d_spawn1" type="Area2D" parent="spawn_area"]
 
-transform/pos = Vector2( 495.005, 102.001 )
+transform/pos = Vector2( 968.005, 159.001 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, 4.69897, -0.0334857 )
@@ -86,10 +87,10 @@ transform/pos = Vector2( 5.41502, 1.52588e-05 )
 
 [node name="a2d_spawn2" type="Area2D" parent="spawn_area"]
 
-transform/pos = Vector2( 168, 44 )
+transform/pos = Vector2( 300, 102 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
+shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -9.89057, 3.89402 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -99,7 +100,7 @@ angular_damp = 1.0
 [node name="col_spawn" type="CollisionShape2D" parent="spawn_area/a2d_spawn2"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -3.86113, 3.89402 )
+transform/pos = Vector2( -9.89057, 3.89402 )
 transform/scale = Vector2( 5.4884, 5.15687 )
 shape = SubResource( 1 )
 trigger = false
@@ -111,7 +112,7 @@ transform/pos = Vector2( -3.93752, 0.0775146 )
 
 [node name="a2d_spawn3" type="Area2D" parent="spawn_area"]
 
-transform/pos = Vector2( 114, 278 )
+transform/pos = Vector2( 245, 542 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
@@ -136,7 +137,7 @@ transform/pos = Vector2( -3.93752, 0.0775146 )
 
 [node name="a2d_spawn4" type="Area2D" parent="spawn_area"]
 
-transform/pos = Vector2( 440, 302 )
+transform/pos = Vector2( 867, 593 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
@@ -161,7 +162,7 @@ transform/pos = Vector2( -3.93752, 0.0775146 )
 
 [node name="a2d_spawn5" type="Area2D" parent="spawn_area"]
 
-transform/pos = Vector2( 270, 302 )
+transform/pos = Vector2( 567, 553 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )
@@ -186,7 +187,7 @@ transform/pos = Vector2( -3.93752, 0.0775146 )
 
 [node name="a2d_spawn6" type="Area2D" parent="spawn_area"]
 
-transform/pos = Vector2( 354, 40 )
+transform/pos = Vector2( 615, 30 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 5.4884, 0, 0, 5.15687, -3.86113, 3.89402 )

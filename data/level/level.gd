@@ -12,12 +12,12 @@ var wave_list
 func _ready():
 	if (system.music_player.is_paused()):
 		system.reset_music()
-	spawn_pos.append(Vector2(495,102))
-	spawn_pos.append(Vector2(150,72))
-	spawn_pos.append(Vector2(114,308))
-	spawn_pos.append(Vector2(440,302))
-	spawn_pos.append(Vector2(270,302))
-	spawn_pos.append(Vector2(354,40))
+	spawn_pos.append(get_node("spawn_area/a2d_spawn1").get_pos())
+	spawn_pos.append(get_node("spawn_area/a2d_spawn2").get_pos())
+	spawn_pos.append(get_node("spawn_area/a2d_spawn3").get_pos())
+	spawn_pos.append(get_node("spawn_area/a2d_spawn4").get_pos())
+	spawn_pos.append(get_node("spawn_area/a2d_spawn5").get_pos())
+	spawn_pos.append(get_node("spawn_area/a2d_spawn6").get_pos())
 	system.wave_num = 1
 	system.ui = get_node("ui")
 	load_wave()
