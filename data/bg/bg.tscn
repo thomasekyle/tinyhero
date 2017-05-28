@@ -5,6 +5,8 @@
 
 [node name="bg" type="Node2D"]
 
+transform/pos = Vector2( -268, -142 )
+transform/scale = Vector2( 2, 2 )
 z/z = -5
 
 [node name="spr_part1" type="Sprite" parent="."]

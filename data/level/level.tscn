@@ -29,6 +29,7 @@ transform/pos = Vector2( 272.45, 163.099 )
 
 [node name="enemies" type="Node2D" parent="."]
 
+transform/scale = Vector2( 1.25, 1.25 )
 z/z = 6
 z/relative = false
 
@@ -52,6 +53,7 @@ flat = false
 [node name="player" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -75.9411, 122.104 )
+transform/scale = Vector2( 2, 2 )
 z/z = 6
 
 [node name="spawn_area" type="Node2D" parent="."]
